@@ -1,0 +1,10 @@
+file = " python play "
+print(file.upper())
+print(file.lower())
+print(file.title())
+print(file.strip())
+print(file.rstrip())
+print(file.lstrip())
+print(file.find("pla"))
+print("pla" in file)
+print("pro" not in file)
