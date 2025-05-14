@@ -1,2 +1,2 @@
-for number in range(2, 10, 5):
+for number in range(1, 10, 2):
     print("Mangoe", number, (number)*".")
