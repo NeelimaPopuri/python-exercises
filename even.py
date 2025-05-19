@@ -1,4 +1,6 @@
+y = 0
 for x in range(1, 10):
     if x % 2 == 0:
+        y += 1
         print(x)
-print("we have 4 even numbers")
+print(f"we have {y} even numbers")
