@@ -15,8 +15,10 @@ if should_we_play == "yes" or should_we_play == "y":
         if choose == "seaport":
             print(
                 "Oopsie! So sorry.. you picked a sinking ship goes glub glub!!--but thanks for Playing!!.. ")
-        else:
+        elif choose == "aero":
             print("You won the game!! You've come so far!!....")
+        else:
+            print("You choose the wrong transport. you die.")
     else:
         print(" Sorry not a valid direction. You die.")
 else:
