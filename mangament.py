@@ -1,15 +1,50 @@
-names = []
-ages = []
-emails = []
+def add_person():
+    name = input("Name:")
+    age = input("Age:")
+    email = input("Email:")
 
-for i in range(3):
-    print(i+1, "Input")
-    name = input("Name: ")
-    age = input("Age: ")
-    email = input("Emails: ")
+    person = {"Name": name, "Age": age, "Email": email}
+    return person
 
-    names.append(name)
-    ages.append(age)
-    emails.append(email)
 
-print(names, ages, emails)
+def delete_contact():
+    for i, person in enumerate(people):
+        print(i+1, '-', person['name'], '|',
+              person['age'], '|', person['email'])
+    while True:
+        number = input("Enter a number to delete: ")
+        try:
+            number = int(number)
+            if number <= 0 or number > len(people):
+                print("Invalid number out of range.")
+            else:
+                break
+        except:
+            print("Invalid Number.")
+
+    people.pop(number-1)
+
+
+print("Hi! Welcome to the case management system..")
+print()
+
+people = []
+
+while True:
+
+    command = input("You can 'add', 'delete', 'search' or 'quit':").lower()
+
+    if command == "add":
+        person = add_person()
+        people.append(person)
+        print("Person added.")
+    elif command == "delete":
+        delete_contact(people)
+    elif command == "search":
+        pass
+    elif command == "quit":
+        break
+    else:
+        print("Invalid Command..")
+
+print(people)
