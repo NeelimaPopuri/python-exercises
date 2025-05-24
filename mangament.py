@@ -3,14 +3,19 @@ def add_person():
     age = input("Age:")
     email = input("Email:")
 
-    person = {"Name": name, "Age": age, "Email": email}
+    person = {"name": name, "age": age, "email": email}
     return person
 
 
-def delete_contact():
+def display_people(people):
     for i, person in enumerate(people):
-        print(i+1, '-', person['name'], '|',
-              person['age'], '|', person['email'])
+        print(i + 1, "-", person["name"], "|",
+              person["age"], "|", person["email"])
+
+
+def delete_contact(people):
+    display_people(people)
+
     while True:
         number = input("Enter a number to delete: ")
         try:
