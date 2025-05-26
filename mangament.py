@@ -54,7 +54,7 @@ with open("contacts.json", "r") as f:
 
 
 while True:
-    print("Contact list siz:", len(people))
+    print("Contact list size:", len(people))
     command = input("You can 'add', 'delete', 'search' or 'quit':").lower()
 
     if command == "add":
@@ -69,8 +69,6 @@ while True:
         break
     else:
         print("Invalid Command..")
-
-print(people)
 
 with open("contacts.json", "w") as f:
     json.dump({"contacts": people}, f)
