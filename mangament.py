@@ -1,3 +1,6 @@
+import json
+
+
 def add_person():
     name = input("Name:")
     age = input("Age:")
@@ -46,10 +49,11 @@ def search(people):
 print("Hi! Welcome to the case management system..")
 print()
 
-people = []
+with open("contacts.json", "r") as f:
+    people = json.load(f)["contacts"]
+
 
 while True:
-    print()
     print("Contact list siz:", len(people))
     command = input("You can 'add', 'delete', 'search' or 'quit':").lower()
 
@@ -67,3 +71,6 @@ while True:
         print("Invalid Command..")
 
 print(people)
+
+with open("contacts.json", "w") as f:
+    json.dump({"contacts": people}, f)
