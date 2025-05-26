@@ -28,6 +28,19 @@ def delete_contact(people):
             print("Invalid Number.")
 
     people.pop(number-1)
+    print("Person deleted.")
+
+
+def search(people):
+    search_name = input("Search for a name:").lower()
+    results = []
+
+    for person in people:
+        name = person["name"]
+        if search_name in name.lower():
+            results.append(person)
+
+    display_people(results)
 
 
 print("Hi! Welcome to the case management system..")
@@ -36,7 +49,8 @@ print()
 people = []
 
 while True:
-
+    print()
+    print("Contact list siz:", len(people))
     command = input("You can 'add', 'delete', 'search' or 'quit':").lower()
 
     if command == "add":
@@ -46,7 +60,7 @@ while True:
     elif command == "delete":
         delete_contact(people)
     elif command == "search":
-        pass
+        search(people)
     elif command == "quit":
         break
     else:
