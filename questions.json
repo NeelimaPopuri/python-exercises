@@ -1,0 +1,54 @@
+{
+    "questions": [
+        {
+            "question": "What is 2+2?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "answer": "4"
+        },
+        {
+            "question": "What is 3+2?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "answer": "5"
+        },
+        {
+            "question": "What is 2+1?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "What is 2-2?",
+            "options": [
+                "0",
+                "3",
+                "4",
+                "5"
+            ],
+            "answer": "0"
+        },
+        {
+            "question": "What is 2*2?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "answer": "4"
+        }
+    ]
+}
