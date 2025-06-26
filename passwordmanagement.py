@@ -16,8 +16,7 @@ def add():
     pwd = input("Password:")
 
     with open('passwords.txt', 'a') as f:
-        f.write(name + "|" + pwd + "\n")
-
+        f.write(name + "|" + pwd + "\c
 
 while True:
     mode = input("Would you like to add a new password pr view the old ones?")
